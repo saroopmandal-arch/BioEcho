@@ -3,7 +3,7 @@
 **Multimodal AI Health Biomarker Prediction System**  
 _AMD Slingshot 2026 — Submission_
 
-BioEcho is a multimodal AI system that predicts 6 health biomarkers from a 60-second phone scan — using only your voice, camera, eye movement, and typing. No wearable. No blood test. No clinic.
+BioEcho is a multimodal AI system that predicts 6 health biomarkers from a 60-second PC scan — using only your voice, webcam, eye movement, and typing. No wearable. No blood test. No clinic.
 
 It builds a personal "Bio Signature" — a 256-dimensional vector that fingerprints your unique health state. Tracked weekly, it detects health deterioration up to 6 months before clinical symptoms appear.
 
@@ -19,7 +19,7 @@ BioEcho analyzes 4 input modalities, fuses them, and predicts 6 target biomarker
 
 ### 📸 2. Face (rPPG)
 
-- **Input:** 60-second video from phone front camera
+- **Input:** 60-second video from PC webcam
 - **Features:** Heart Rate, HRV (RMSSD, SDNN, pNN50) via CHROM algorithm
 - **Detects:** Cardiac stress, Anaemia, Blood pressure proxy
 
@@ -69,9 +69,15 @@ BioEcho is specifically designed to leverage **AMD Ryzen AI NPUs**.
 - **On-device Privacy:** Removes cloud dependence, which is a key differentiator.
 - **Performance:** Model execution scales down to ~1.1 ms on a Ryzen AI NPU compared to ~14.0 ms on standard Intel i7 CPUs, making real-time interactive feedback possible.
 
-## 🤝 Open Source & Free
+## 🤝 Open Source & Research Use Only (Non-Commercial)
 
-BioEcho is designed to break down barriers in healthcare. It runs purely on-device without cloud subscriptions or hidden data costs, making it **100% Free and Open Source**. See [docs/ARCHITECTURE_AND_TRAINING.md](docs/ARCHITECTURE_AND_TRAINING.md) to start training your own models on free Kaggle GPUs!
+BioEcho is designed to break down barriers in healthcare. It runs purely on-device without cloud subscriptions or hidden data costs, making it **100% Free and Open Source**.
+
+> [!WARNING]
+> **Strict Non-Commercial Use License (CC BY-NC 4.0)**
+> The models provided in this repository are trained on open-source clinical datasets (including RAVDESS, mPower, DAIC-WOZ, UBFC-rPPG, and others) which are strictly restricted to **academic, research, and non-commercial use only**. You may not use BioEcho models or code for any commercial, medical, or profitable applications.
+
+See [docs/ARCHITECTURE_AND_TRAINING.md](docs/ARCHITECTURE_AND_TRAINING.md) to start training your own non-commercial research models on free Kaggle GPUs!
 
 ---
 
