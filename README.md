@@ -51,7 +51,7 @@ BioEcho analyzes 4 input modalities, fuses them, and predicts 6 target biomarker
 The system architecture features `AudioEncoder`, `RPPGEncoder`, `GazeEncoder`, and `KeystrokeEncoder`, feeding into custom prediction and uncertainty heads (~15-20M parameters total).
 
 - **`bioecho_master.py` & `bioecho_ui.py`:** Core source code for models, data processing, and user interface.
-- **`bioecho_v2_fixed.ipynb` / `notebook_fixed.ipynb`:** Jupyter Notebooks containing the full Kaggle training pipeline, from global config down to early stopping, evaluation plots, synthetic data generation, and Mahalanobis drift detection.
+- **`docs/ARCHITECTURE_AND_TRAINING.md`:** A comprehensive breakdown of the 6-stage Kaggle notebook training pipeline and how the architecture works.
 - **`run_bioecho.bat`:** Windows batch script to launch the application components.
 
 ## 🚀 Key Technical Decisions
@@ -69,7 +69,11 @@ BioEcho is specifically designed to leverage **AMD Ryzen AI NPUs**.
 - **On-device Privacy:** Removes cloud dependence, which is a key differentiator.
 - **Performance:** Model execution scales down to ~1.1 ms on a Ryzen AI NPU compared to ~14.0 ms on standard Intel i7 CPUs, making real-time interactive feedback possible.
 
-## 🤝 Community & Contact
+## 🤝 Open Source & Free
+
+BioEcho is designed to break down barriers in healthcare. It runs purely on-device without cloud subscriptions or hidden data costs, making it **100% Free and Open Source**. See [docs/ARCHITECTURE_AND_TRAINING.md](docs/ARCHITECTURE_AND_TRAINING.md) to start training your own models on free Kaggle GPUs!
+
+---
 
 **Built for the AMD Slingshot 2026 — Bengaluru Campus Day (27-28 April 2026)**
 _Theme: AI for Social Good / Open Innovation_
